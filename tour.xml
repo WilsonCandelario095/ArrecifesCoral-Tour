@@ -2,6 +2,12 @@
 
 	<include url="skin/vtourskin.xml" />
 
+	<plugin name="toolbox" 
+		url="plugins/toolbox/toolboxV2.js"
+		preload="true"
+		keep="true"
+		/>
+		
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
 	               maps_type="google"
@@ -83,6 +89,15 @@
 			<cube url="panos/arrecife1.tiles/pano_%s.jpg" />
 		</image>
 
+		<hotspot
+			name="spot1"
+			style="pisada"
+			url="images/pisada.png"
+			ath="-20" 
+			atv="19.90"
+			linkedscene="scene_arrecife2"
+			fov="90"
+		/>
 	</scene>
 
 	<scene name="scene_arrecife2" title="arrecife2" onstart="" thumburl="panos/arrecife2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
@@ -97,6 +112,15 @@
 			<cube url="panos/arrecife2.tiles/pano_%s.jpg" />
 		</image>
 
+		<hotspot
+			name="spot1"
+			style="pisada"
+			url="images/pisada.png"
+			ath="-20" 
+			atv="19.90"
+			linkedscene="scene_arrecife3"
+			fov="90"
+		/>
 	</scene>
 
 	<scene name="scene_arrecife3" title="arrecife3" onstart="" thumburl="panos/arrecife3.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
@@ -111,6 +135,15 @@
 			<cube url="panos/arrecife3.tiles/pano_%s.jpg" />
 		</image>
 
+		<hotspot
+			name="spot1"
+			style="pisada"
+			url="images/pisada.png"
+			ath="-20" 
+			atv="19.90"
+			linkedscene="scene_arrecife4"
+			fov="90"
+		/>
 	</scene>
 
 	<scene name="scene_arrecife4" title="arrecife4" onstart="" thumburl="panos/arrecife4.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
@@ -125,6 +158,15 @@
 			<cube url="panos/arrecife4.tiles/pano_%s.jpg" />
 		</image>
 
+		<hotspot
+			name="spot1"
+			style="pisada"
+			url="images/pisada.png"
+			ath="-20" 
+			atv="19.90"
+			linkedscene="scene_arrecife5"
+			fov="90"
+		/>
 	</scene>
 
 	<scene name="scene_arrecife5" title="arrecife5" onstart="" thumburl="panos/arrecife5.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
@@ -139,6 +181,15 @@
 			<cube url="panos/arrecife5.tiles/pano_%s.jpg" />
 		</image>
 
+		<hotspot
+			name="spot1"
+			style="pisada"
+			url="images/pisada.png"
+			ath="-20" 
+			atv="19.90"
+			linkedscene="scene_arrecife4"
+			fov="90"
+		/>
 	</scene>
 
 
