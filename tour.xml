@@ -2,6 +2,12 @@
 
 	<include url="skin/vtourskin.xml" />
 
+	<plugin name="soundinterface"
+	        url="plugins/soundinterface.js"
+	        preload="true"
+	        autostart="false"
+	        />
+
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
 	               maps_type="google"
@@ -71,7 +77,32 @@
 	
 
 	
-	<scene name="scene_coralcerebro1" title="coralcerebro1" onstart="" thumburl="panos/coralcerebro1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_inicio360" title="Inicio" isvideopano="true" onstart="stopsound(all);" thumburl="panos/coralcerebro1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.sphere ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/coralcerebro1.tiles/preview.jpg" />
+
+		<plugin name="video"
+		        url="plugins/videoplayer.js"
+		        videourl="images/inicio.mp4"
+		        panovideo="true"
+		        pausedonstart="false"
+		        loop="true"
+		        muted="true"
+		        volume="1.0"
+		        onvideocomplete="null"
+		        />
+
+		<image>
+			<sphere url="plugin:video" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_georginas" title="coralcerebro1" onstart="stopsound(all); playsound(georginas, audios/georginas.mp3, true, 0.8);" thumburl="panos/coralcerebro1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -85,7 +116,7 @@
 
 	</scene>
 
-	<scene name="scene_coralcerebro2" title="coralcerebro2" onstart="" thumburl="panos/coralcerebro2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_coralcerebro" title="coralcerebro2" onstart="stopsound(all); playsound(coralCerebro, audios/coralCerebro.mp3, true, 0.8);" thumburl="panos/coralcerebro2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -99,7 +130,7 @@
 
 	</scene>
 
-	<scene name="scene_coralcerebro3" title="coralcerebro3" onstart="" thumburl="panos/coralcerebro3.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_3" title="coralcerebro3" onstart="stopsound(all);" thumburl="panos/coralcerebro3.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -113,7 +144,7 @@
 
 	</scene>
 
-	<scene name="scene_erizo1" title="erizo1" onstart="" thumburl="panos/erizo1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_erizo1" title="erizo1" onstart="stopsound(all);" thumburl="panos/erizo1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -127,7 +158,7 @@
 
 	</scene>
 
-	<scene name="scene_esponja1" title="esponja1" onstart="" thumburl="panos/esponja1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_esponja1" title="esponja1" onstart="stopsound(all);" thumburl="panos/esponja1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -141,7 +172,7 @@
 
 	</scene>
 
-	<scene name="scene_esponjaroja1" title="esponjaroja1" onstart="" thumburl="panos/esponjaroja1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_esponjaroja1" title="esponjaroja1" onstart="stopsound(all);" thumburl="panos/esponjaroja1.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -155,7 +186,7 @@
 
 	</scene>
 
-	<scene name="scene_esponjaroja2" title="esponjaroja2" onstart="" thumburl="panos/esponjaroja2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_esponjaroja2" title="esponjaroja2" onstart="stopsound(all);" thumburl="panos/esponjaroja2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -165,6 +196,31 @@
 
 		<image>
 			<cube url="panos/esponjaroja2.tiles/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_final360" title="Final" isvideopano="true" onstart="stopsound(all);" thumburl="panos/esponjaroja2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.sphere ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/esponjaroja2.tiles/preview.jpg" />
+
+		<plugin name="video"
+		        url="plugins/videoplayer.js"
+		        videourl="images/final.mp4"
+		        panovideo="true"
+		        pausedonstart="false"
+		        loop="true"
+		        muted="true"
+		        volume="1.0"
+		        onvideocomplete="null"
+		        />
+
+		<image>
+			<sphere url="plugin:video" />
 		</image>
 
 	</scene>
